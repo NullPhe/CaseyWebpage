@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Is Casey off on one?</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<h1>Is Casey off on one?</h1>
+	<button id="generate-btn">Click here to see</button>
+	<p id="Off on one or not?"></p>
+	<script>
+		$(document).ready(function() {
+			$("#generate-btn").click(function() {
+				$.ajax({
+					url: "random_sentence.py",
+					success: function(result) {
+						$("#sentence").text(result);
+					}
+				});
+			});
+		});
+	</script>
+</body>
+</html>
